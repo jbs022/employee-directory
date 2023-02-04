@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Base Styles */
+
+body {
+    position: relative;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+}
+
+header {
+    max-width: 1440px;
+    margin: 5rem auto 0;
+    padding: 0 2rem;
+}
+
+h1, h2 {
+    margin: 0 0 1rem;
+    color: #242424;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+
+/* Cards Styling */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+    gap: 2rem;
+
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+
+    padding: 1.5em;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.card img {
+    width: 100%;
+    max-width: 125px;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.card:hover {
+    background-color: #242424;
+}
+
+.card:hover h2 {
+    color: #fff;
+}
+
+.card:hover p {
+    color: #f1f1f1;
+}
+
+/* Modal Styling */
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.5);
+}
+
+.modal {
+    position: relative;
+    width: 375px;
+    margin: 10% auto auto;
+    padding: 3em 1.875em;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.modal img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+.modal hr {
+    height: 1px;
+    margin: 2rem 0;
+    background-color: #d1d1d1;
+    border: none;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.5em;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: #d1d1d1;
+}
+
+.modal-close:focus {
+    border: 1px solid #242424;
+}
+
+.modal-close:active {
+    background-color: #242424;
+    color: #fff;
+}
+
+/* Text Styling */
+
+.text-container:last-child {
+    margin-bottom: 0;
+}
+
+.email,
+.city,
+.phone-number,
+.address,
+.birthday {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.email,
+.phone-number,
+.address {
+    margin: 0 0 0.5rem;
+}
+
+.city,
+.birthday {
+    margin: 0;
+}
+
+.city {
+    text-transform: capitalize;
+}
